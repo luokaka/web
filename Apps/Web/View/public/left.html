@@ -1,0 +1,89 @@
+<div class="frame-sidebar">
+    <div class="side-item">
+        <div class="side-hd"><a>监控</a><i class="iconfont">&#xe60d;</i><em></em></div>
+        <div class="side-bd">
+            <ul>
+                <if condition="$action eq 'cpuload' or $action eq 'cpuused' ">
+                 <li class="on" ><a class="nav-link" href="{:U(cpuload)}"><i class="iconfont">&#xe60c;</i>CPU</a>
+                <else />
+                 <li  ><a class="nav-link" href="{:U(cpuload)}"><i class="iconfont">&#xe60c;</i>CPU</a>
+                </if>
+                    <dl class="sed-nav">
+                        <if condition="$action eq 'cpuload' ">
+                            <dd><a class="on" href="{:U(cpuload)}">负载</a></dd>
+                        <else />
+                            <dd><a href="{:U(cpuload)}">负载</a></dd>
+                        </if>
+                        <if condition="$action eq 'cpuused' ">
+                            <dd><a class="on" href="{:U(cpuused)}">利用情况</a></dd>
+                        <else />
+                            <dd><a href="{:U(cpuused)}">利用情况</a></dd>
+                        </if>
+                        
+                    </dl>
+                </li>
+                <if condition="$action eq 'memery' or $action eq 'memeryswap' ">
+                   <li class='on'> <a class="nav-link" href="{:U(memery)}"><i class="iconfont">&#xe615;</i>内存</a>
+                <else />
+                  <li > <a class="nav-link" href="{:U(memery)}"><i class="iconfont">&#xe615;</i>内存</a>
+                </if>
+                    
+                    <dl class="sed-nav">
+                        <if condition="$action eq 'memeryswap' ">
+                            <dd><a class="on" href="{:U(memeryswap)}">swap</a></dd>
+                        <else />
+                           <dd><a href="{:U(memeryswap)}">swap</a></dd>
+                        </if>
+                        <if condition="$action eq 'memery' ">
+                            <dd><a class="on" href="{:U(memery)}">利用情况</a></dd>
+                        <else />
+                           <dd><a href="{:U(memery)}">利用情况</a></dd>
+                        </if> 
+                    </dl>
+                </li>
+                
+                    <if condition="$action eq 'diskused' or $action eq 'diskio' ">
+                           <li class='on'> <a class="nav-link" href="{:U(diskused)}"><i class="iconfont">&#xe60f;</i>硬盘</a>
+                        <else />
+                          <li >  <a class="nav-link" href="{:U(diskused)}"><i class="iconfont">&#xe60f;</i>硬盘</a>
+                        </if>
+                   
+                    <dl class="sed-nav">
+                        <if condition="$action eq 'diskio' ">
+                            <dd><a class="on" href="{:U(diskio)}">IO</a></dd>
+                        <else />
+                           <dd><a  href="{:U(diskio)}">IO</a></dd>
+                        </if>
+
+                        <if condition="$action eq 'diskused' ">
+                            <dd><a class="on" href="{:U(diskused)}">利用情况</a></dd>
+                        <else />
+                           <dd><a href="{:U(diskused)}">利用情况</a></dd>
+                        </if>
+                        
+                        
+                    </dl>
+                </li>               
+                    <if condition="$action eq 'netused' ">
+                        <li class='on'><a class="nav-link" href="{:U(netused)}"><i class="iconfont">&#xe613;</i>网络</a>
+                    <else />
+                        <li><a class="nav-link" href="{:U(netused)}"><i class="iconfont">&#xe613;</i>网络</a>
+                    </if>
+                    <dl class="sed-nav">
+                        <dd><a class='on' href="{:U(netused)}">利用情况</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="side-item">
+        <div class="side-hd"><a>日志</a><i class="iconfont">&#xe611;</i><em></em></div>
+        <div class="side-bd">
+            <ul>
+                <li><a class="nav-link" href="{:U(log)}"><i class="iconfont">&#xe60e;</i>日志分析</a></li>
+                <li><a class="nav-link" href="{:U(loginfo)}"><i class="iconfont">&#xe614;</i>统计分析</a></li>
+                <li><a class="nav-link" href="{:U(logwarning)}"><i class="iconfont">&#xe616;</i>警告中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

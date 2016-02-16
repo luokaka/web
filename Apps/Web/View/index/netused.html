@@ -1,0 +1,89 @@
+<include file="public/header" />
+<body>
+    <div class="page page-monitor">
+        <!-- header start -->
+        <include file="public/top" />
+        <!-- header end  -->
+        <div class="frame-body frame-sidebar-full">
+            <!-- 侧栏 -->
+            <include file="public/left" />
+            <!-- 状态栏 -->
+            <ul class="frame-statusbar">
+                <li>当前数据更新时间为：<span class="c-blue">2014-11-27 12:00:00</span></li>
+                <li>还剩 : <span class="c-green">03：</span><span class="c-blue">00</span></li>
+                <li>进行数据更新 : <span class="c-orange">55</span></li>
+            </ul>
+            <!-- 内容 -->
+            <div class="frame-content">
+                <div class="page-container monitor-cpu">
+                    <div class="hd hdbg">
+                        <span class="tit">网络实时监控:</span>
+                        <label class="form-title">时间从：</label>
+                        <input class="form-date" type="text" name="" readonly="true">
+                        <label class="form-title">到</label>
+                        <input class="form-date" type="text" name="" readonly="true">
+                        <select class="form-select mr10 ml10" name="">
+                            <option>全部</option>
+                            <option>类型类型</option>
+                        </select>
+                        <input class="btn btn-blue w70" type="submit" value="搜索">
+                    </div>
+                    <div class="bd bd-load">
+                        <div class="alert mb15 bgcolor">
+                            <p>
+                                <span class="fr">
+                              流入最高峰值为： <b class="c-red mr50">95.46KB</b>
+                              总流量峰值为：<b class="c-green">98.63KB</b>
+                            </span> 流出最高峰值为： <b class="c-blue">5.01KB</b>
+                            </p>
+                        </div>
+                        <div class="echart mr0" id="loadChart">
+                            <img src="assets/images/member/liyl-char.png">
+                        </div>
+                    </div>
+                    <div class="latest-warning">
+                        <div class="latest-warning-tit"><span class="titstyle"></span>最新警告</div>
+                        <div class="latest-warning-con">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="listspan"><i class="iconfont c-red">&#xe612;</i>2015-08-27  17：17</span>
+                                        <span class="listspan">CPU负载量：
+                           <span class="c-blue">90</span>
+                                        </span>
+                                        <span class="listspan c-red">C盘剩余空间不足！</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="listspan"><i class="iconfont c-red">&#xe612;</i>2015-08-27  17：17</span>
+                                        <span class="listspan">CPU负载量：
+                           <span class="c-blue">90</span>
+                                        </span>
+                                        <span class="listspan c-red">C盘剩余空间不足！</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="listspan"><i class="iconfont c-red">&#xe612;</i>2015-08-27  17：17</span>
+                                        <span class="listspan">CPU负载量：
+                           <span class="c-blue">90</span>
+                                        </span>
+                                        <span class="listspan c-red">C盘剩余空间不足！</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    diyou.use("app/progress", function(fn) {
+        fn.monitorProgress();
+    })
+    </script>
+</body>
+
+</html>

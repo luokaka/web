@@ -1,0 +1,539 @@
+@charset "utf-8";
+.page-monitor {
+    .monitor-cpu {
+        .hd {
+            margin-bottom: 35px;
+            .tit {
+                font-size: 12px;
+                color: #333;
+                font-weight: bold;
+                margin-right: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .bd-progress {
+            padding-top: 85px;
+            padding-bottom: 100px;
+            li {
+                text-align: center;
+                overflow: hidden;
+                .progbar {
+                    display: inline-block;
+                    *display: inline;
+                    width: 185px;
+                    height: 185px;
+                    line-height: 180px;
+                    position: relative;
+                    .prog-title {
+                        font-size: 50px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        color: #d5d5d5;
+                        &.c1 {
+                            color: #2386e6;
+                        }
+                        &.c2 {
+                            color: #ffc038;
+                        }
+                        &.c3 {
+                            color: #f53f25;
+                        }
+                        &.c4 {
+                            color: #05ab11;
+                        }
+                    }
+                }
+                .name {
+                    margin-top: 30px;
+                    font-size: 20px;
+                    color: #666;
+                }
+            }
+        }
+        .bd-load {
+            position: relative;
+            overflow: hidden;
+            .alert {
+                line-height: 26px;
+                padding: 7px 15px;
+                b {
+                    line-height: 1;
+                    font-size: 26px;
+                    font-weight: normal;
+                    vertical-align: top;
+                }
+            }
+            .bgcolor {
+                background: none;
+                border: none;
+            }
+            .echart {
+                padding: 20px 0;
+                margin: 0 -40px;
+            }
+            .mr0 {
+                margin: 0 0px!important;
+            }
+        }
+        .latest-warning {
+            width: 100%;
+            margin: 15px 0;
+            .latest-warning-tit {
+                font-size: 14px;
+                color: #666;
+                line-height: 18px;
+                font-weight: bold;
+                .titstyle {
+                    background: #298aea;
+                    width: 5px;
+                    height: 18px;
+                    display: inline-block;
+                    float: left;
+                    line-height: 18px;
+                    border-radius: 2px;
+                    margin-right: 5px;
+                }
+            }
+            .latest-warning-con {
+                width: 80%;
+                ul {
+                    width: 100%;
+                    margin: 15px 0;
+                    li {
+                        width: 100%;
+                        line-height: 30px;
+                        clear: both;
+                        .listspan {
+                            width: 33.3%;
+                            float: left;
+                            display: inline-block;
+                            .iconfont {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //网页扫描
+    .page-scanning {
+        .page-scanning-top {
+            margin: 30px 0;
+            text-align: center;
+            .scanning-content {
+                width: 430px;
+                border: 1px solid #eee;
+                background: #f5f5f5;
+                padding: 15px;
+                line-height: 25px;
+                font-size: 16px;
+                border-radius: 5px 0 0 5px;
+            }
+            .btn_new {
+                -moz-user-select: none;
+                border: 0 none;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                padding: 15px;
+                text-align: center;
+                white-space: nowrap;
+                border: 1px solid #2d8eed;
+                margin-left: -5px;
+            }
+        }
+        .page-scanning-middle {
+            width: 100%;
+            padding-top: 20px;
+            .page-scanning-detil {
+                width: 100%;
+            }
+        }
+        .page-scanning-rizhi {
+            width: 100%;
+        }
+        .page-scanning-bottom {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            .iconfont {
+                color: #ff8200;
+                font-size: 28px!important;
+            }
+        }
+    }
+}
+
+//日志列表页表格公用样式
+.page-scanning-tit {
+    border-bottom: 1px solid #f7f7f7;
+    line-height: 18px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    margin: 15px 0;
+    .titcon {
+        border-bottom: 1px solid #298aea;
+        padding: 0 10px 7px;
+        .titstyle {
+            background: #298aea;
+            width: 5px;
+            height: 18px;
+            display: inline-block;
+            line-height: 18px;
+            border-radius: 2px;
+            margin-right: 5px;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.Logtable {
+    width: 100%;
+    tr {
+        line-height: 25px;
+        border-bottom: 1px solid #f5f5f5;
+        th {
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 100;
+        }
+        td {
+            font-size: 12px;
+            padding: 10px 0;
+            text-align: center;
+            color: #666;
+            span {
+                font-size: 12px;
+                color: #fff;
+                padding: 0 5px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 3px;
+            }
+            .bgred {
+                background: #f75d6b;
+            }
+            .bgblue {
+                background: #6fbeea;
+            }
+            .bgyellow {
+                background: #eec523;
+            }
+        }
+    }
+    .trbg {
+        background: #f7f7f7;
+    }
+}
+
+
+/*日志分析*/
+
+.page-scanning-list {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    ul {
+        width: 84%;
+        margin: 20px 8%;
+        li {
+            width: 28%;
+            float: left;
+            display: inline-block;
+            text-align: center;
+            margin: 15px 0 0;
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+}
+
+//系统分析
+.system-analysis {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    ul {
+        width: 100%;
+        margin: 20px 0;
+        li {
+            width: 135px;
+            float: left;
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding-bottom: 10px;
+            dl dt,
+            dl dd {
+                width: 100%;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+//添加日志
+.add-log {
+    width: 100%;
+    margin: 15px 0;
+    .formrow {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        color: #666666;
+        span {
+            margin-right: 20px;
+            display: inline-block;
+            font-size: 14px;
+            label {
+                margin-right: 20px;
+                display: inline-block;
+            }
+        }
+        .inp-tex {
+            width: 200px;
+            line-height: 25px;
+            border: 1px solid #e2e2e2;
+            border-radius: 3px;
+            margin-right: 15px;
+            padding: 5px 10px;
+        }
+        .openbtn {
+            background: #298aea;
+            line-height: 25px;
+            padding: 5px 0;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 3px;
+            width: 154px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.hdbg {
+    background: #f7f7f7;
+    padding: 5px;
+}
+
+//安全告警
+.security-alarm {
+    width: 100%;
+    .security-alarm-top {
+        width: 96%;
+        background: #fff;
+        padding: 20px 2%;
+        display: inline-block;
+        font-size: 14px;
+        color: #666666;
+        overflow: hidden;
+        .leftspan {
+            width: 400px;
+            float: left;
+            display: inline-block;
+            line-height: 25px;
+            margin-top: 5px;
+        }
+        .rightspan {
+            float: right;
+            display: inline-block;
+            line-height: 25px;
+            .labetit {
+                float: left;
+                margin-right: 5px;
+                display: inline-block;
+                margin-top: 5px;
+            }
+            .bar {
+                background: #f3f3f4;
+                display: inline-block;
+                float: left;
+                height: 8px;
+                position: relative;
+                width: 133px;
+                border-radius: 4px;
+                margin: 15px 6px;
+                .bar_width {
+                    background: #ff8200;
+                    display: inline-block;
+                    height: 8px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 133px;
+                    border-radius: 4px;
+                }
+            }
+            .aqxs {
+                float: left;
+                display: inline-block;
+                margin: 5px;
+            }
+            .dcbtn {
+                float: left;
+                display: inline-block;
+                line-height: 20px;
+                border: 1px solid #1e81e3;
+                font-size: 12px;
+                color: #2688e8;
+                padding: 5px 15px;
+                border-radius: 15px;
+            }
+        }
+        ul {
+            width: 110%;
+            li {
+                width: 28%;
+                text-align: left;
+                margin: 0 20px;
+                display: inline-block;
+                .spanleft {
+                    width: 80px;
+                    margin-right: 10px;
+                    float: left;
+                    display: inline-block;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                .spanright {
+                    float: left;
+                    display: inline-block;
+                    a {
+                        border: 1px solid #2ea7e0;
+                        padding: 3px 20px;
+                        line-height: 20px;
+                        font-size: 12px;
+                        margin-left: 10px;
+                    }
+                    .aline {
+                        border: 1px solid #ff8200 !important;
+                    }
+                }
+            }
+        }
+    }
+    .security-alarm-bottom {
+        background: #fff;
+        width: 100%;
+        display: inline-block;
+        margin-top: 20px;
+    }
+}
+//手风琴效果css
+.sideMenu {
+    margin-top: 10px;
+    ul {
+        padding: 8px 0px;
+        color: #999;
+        li {
+            width: 100%;
+            background: #f7f7f7;
+            color: #333333;
+            line-height: 20px;
+            padding: 5px 0;
+            display: inline-block;
+            .w240 {
+                width: 254px;
+                display: inline-block;
+                float: left;
+                padding-left: 15px;
+                line-height: 20px;
+                margin: 5px 0;
+            }
+            .w220 {
+                width: 220px;
+                display: inline-block;
+                float: left;
+                line-height: 20px;
+                margin: 5px 0;
+            }
+            .w200 {
+                width: 220px;
+                display: inline-block;
+                float: left;
+                line-height: 20px;
+                margin: 5px 0;
+            }
+            .form-select {
+                border: 1px solid #e9e9e9;
+                border-radius: 3px;
+                color: #333;
+                font-size: 12px;
+                height: 20px;
+                padding: 0 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+    h3 {
+        height: 32px;
+        line-height: 32px;
+        padding-left: 10px;
+        cursor: pointer;
+        font: normal 14px/32px "Microsoft YaHei";
+        width: 100%;
+        clear: both;
+        border-bottom:1px dashed #e2e2e2;
+        padding-bottom:10px;
+        em {
+            float: left;
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: url(/assets/images/member/icoAdd.png) no-repeat;
+            cursor: pointer;
+            margin: 12px 15px 12px 0;
+        }
+    }
+    .on em {
+        background: url(/assets/images/member/icoAdd.png) no-repeat;
+        margin: 12px 15px 12px 0;
+    }
+}
+
+//警告中心搜索下拉
+.content-search {
+    width: 90%;
+    margin: 15px 5% 0;
+    span {
+        line-height: 25px;
+        margin-right: 15px;
+        a {
+            border: 1px solid #2aae19;
+            padding: 2px 10px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+    }
+    .search-from {
+        width: 400px;
+        border: 1px solid #2aae19;
+        height: 180px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        left: 272px;
+        background: #fff;
+        top: 238px;
+        border-radius: 0 3px 3px 3px;
+    }
+}

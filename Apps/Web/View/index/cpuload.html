@@ -1,0 +1,133 @@
+<include file="public/header" />
+
+<body>
+<div class="page page-monitor">
+    <!-- header start -->
+	<include file="public/top" />
+    <!-- header end  -->
+
+    <div class="frame-body frame-sidebar-full">
+        <!-- 侧栏 -->
+        <include file="public/left" />
+
+        <!-- 状态栏 -->
+        <ul class="frame-statusbar">
+            <li>当前数据更新时间为：<span class="c-blue">2014-11-27 12:00:00</span></li>
+            <li>还剩 : <span class="c-green">03：</span><span class="c-blue">00</span></li>
+            <li>进行数据更新 : <span class="c-orange">55</span></li>
+        </ul>
+
+        <!-- 内容 -->
+        <div class="frame-content">
+            <div class="page-container monitor-cpu">
+                <div class="hd">
+                    <span class="tit">CPU实时负载监控:</span>
+                    <label class="form-title">时间从：</label>
+                    <input class="form-date" type="text" name="" readonly="true">
+                    <label class="form-title">到</label>
+                    <input class="form-date" type="text" name="" readonly="true">
+                    <select class="form-select mr10 ml10" name="">
+                        <option>全部</option>
+                        <option>类型类型</option>
+                    </select>
+                    <input class="btn btn-blue w70" type="submit" value="搜索">
+                </div>
+                <div class="bd bd-load">
+                    <div class="alert mb15">
+                        <p>
+                            <span class="fr">
+                                最高峰值为: <b class="c-red mr50">90</b>
+                                出现于：2015-08-27 11:05:10
+                            </span>
+                            CPU负载情况：<b class="c-blue">20</b>
+                        </p>
+                    </div>
+
+                    <div class="echart" id="loadChart"></div>
+                    <script src="assets/js/plugin/echarts-all.js"></script>
+                    <script>
+                        var myChart = echarts.init(document.getElementById('loadChart'));
+                        // var option = {
+                        //     tooltip : {
+                        //         formatter: "{a} <br/>{b} : {c}%"
+                        //     },
+                        //     toolbox: {
+                        //         show : false,
+                        //         feature : {
+                        //             mark : {show: true},
+                        //             restore : {show: true},
+                        //             saveAsImage : {show: true}
+                        //         }
+                        //     },
+                        //     series : [
+                        //         {
+                        //             name:'业务指标',
+                        //             type:'gauge',
+                        //             detail : {formatter:'{value}%'},
+                        //             data:[{value: 50, name: '完成率'}]
+                        //         }
+                        //     ]
+                        // }
+
+                        var option = {
+                            tooltip : {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['1分钟','5分钟','10分钟']
+                            },
+                            toolbox: {
+                                show : true
+                            },
+                            calculable : true,
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    boundaryGap : false,
+                                    data : ['08-27','08-28','08-29','08-30','09-01','09-02','09-03']
+                                }
+                            ],
+                            yAxis : [
+                                {
+                                    type : 'value'
+                                }
+                            ],
+                            series : [
+                                {
+                                    name:'1分钟',
+                                    type:'line',
+                                    stack: '总量',
+                                    data:[20, 32, 01, 34, 90, 30, 10]
+                                },
+                                {
+                                    name:'5分钟',
+                                    type:'line',
+                                    stack: '总量',
+                                    data:[20, 82, 91, 34, 80, 60, 70]
+                                },
+                                {
+                                    name:'10分钟',
+                                    type:'line',
+                                    data:[50, 32, 21, 15, 19, 33, 41]
+                                }
+                            ]
+                        };
+
+
+                        myChart.setOption(option);
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    diyou.use("app/progress", function(fn) {
+        fn.monitorProgress();
+    })
+</script>
+</body>
+</html>

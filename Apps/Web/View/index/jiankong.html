@@ -1,0 +1,65 @@
+<include file='public/header' />
+
+<body>
+    <div class="page page-monitor">
+        <!-- header start -->
+       <include file="public/top" />
+        <!-- header end  -->
+        <div class="frame-body frame-sidebar-full">
+            <!-- 侧栏 -->
+                <include file="public/left" />
+            <!-- 状态栏 -->
+            <ul class="frame-statusbar">
+                <li>当前数据更新时间为：<span class="c-blue">2014-11-27 12:00:00</span></li>
+                <li>还剩 : <span class="c-green">03：</span><span class="c-blue">00</span></li>
+                <li>进行数据更新 : <span class="c-orange">55</span></li>
+            </ul>
+            <!-- 内容 -->
+            <div class="frame-content">
+                <div class="page-container monitor-cpu">
+                    <div class="hd">
+                        <a class="btn btn-blue-border fr" id="Monitoring" href="javascript:;"><i class="iconfont f17">&#xe60a;</i> 监控设置</a>
+                        <select class="form-select">
+                            <option>192.168.01.2</option>
+                        </select>
+                    </div>
+                    <div class="bd bd-progress">
+                        <ul class="row">
+                            <li class="col-lg-3">
+                                <div class="progbar" id="prog1" data="48" data-color="#2386e6">
+                                    <span class="prog-title c1">48%</span>
+                                </div>
+                                <div class="name">CPU使用</div>
+                            </li>
+                            <li class="col-lg-3">
+                                <div class="progbar" id="prog2" data="88" data-color="#ffc038">
+                                    <span class="prog-title c2">88%</span>
+                                </div>
+                                <div class="name">内存使用</div>
+                            </li>
+                            <li class="col-lg-3">
+                                <div class="progbar" id="prog3" data="100" data-color="#f53f25">
+                                    <span class="prog-title c3">100%</span>
+                                </div>
+                                <div class="name">硬盘使用</div>
+                            </li>
+                            <li class="col-lg-3">
+                                <div class="progbar" id="prog4" data="0" data-color="#05ab11">
+                                    <span class="prog-title">0%</span>
+                                </div>
+                                <div class="name">网络使用</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    diyou.use("app/common", function(fn) {
+        fn.MonitoringDialog();
+    })
+    </script>
+</body>
+
+</html>

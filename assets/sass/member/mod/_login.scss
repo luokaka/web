@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.page-login{
+	.login-box{
+		width: 500px;
+		height: 480px;
+		background-color: #FFF;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -240px 0 0 -250px;
+		box-shadow: 0 3px 6px #eee;
+		.hd{
+			padding: 48px 0;
+			text-align: center;
+		}
+		.bd{
+			padding: 0 38px;
+			.form-group{
+				margin-bottom: 20px;
+				position: relative;
+			}
+			.form-control{
+				width: 376px;
+				padding: 7px 12px 7px 36px;
+				background-color: #f0f0f0;
+				font-size: 14px;
+				&:focus+i{
+					color: #2d8eed;
+				}
+			}
+			.form-group-code{
+				.form-control{
+					width: 240px;
+					float: left;
+				}
+				.btn{
+					width: 120px;
+					padding: 8px 0;
+					background-color: #ceedff;
+					border-color: #ceedff;
+					color: #2d8eed;
+					float: right;
+				}
+			}
+			.iconfont{
+				color: #bcbcbc;
+				font-size: 16px;
+				line-height: 1;
+				position: absolute;
+				left: 12px;
+				top: 50%;
+				margin-top: -8px;
+			}
+		}
+		.fd{
+			margin: 0 38px;
+			border-top: 1px solid #eaf3fd;
+			padding-top: 15px;
+			.link{
+				float: left;
+				position: relative;
+				width: 50px;
+				height: 50px;
+				cursor: default;
+				.iconfont{
+					display: block;
+					width: 48px;
+					height: 48px;
+					line-height: 48px;
+					text-align: center;
+					border-radius: 100%;
+					background-color: #FFF;
+					border: 1px solid #57a5f1;
+					font-size: 24px;
+					color: #57a5f1;
+					position: relative;
+					z-index: 10;
+				}
+				a{					
+					position: absolute;
+					top: 10px;
+					left: 35px;
+					height: 29px;
+					width: 150px;
+					text-align: center;
+					line-height: 29px;
+					border-radius: 29px;
+					background-color: #57a5f1;
+					color: #FFF;
+					white-space:nowrap;					
+					max-width: 0;
+					overflow: hidden;					
+					transition-duration: 0.4s;
+				}
+				&.link-reg{
+					float: right;
+					a{
+						left: auto;
+						right: 33px;
+					}
+				}
+				&:hover{
+					a{
+						max-width: 150px;
+						
+					}
+				}
+			}
+		}
+	}
+	.register-box{
+		height: 586px;
+		margin-top: -300px;
+	}
+}
